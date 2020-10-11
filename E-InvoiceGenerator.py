@@ -31,7 +31,7 @@ class product:
         self.rate = rate
         self.tax = tax
         self.total = (quantity * rate) - discount
-        self.discount = discount
+        
 
 
 root = Tk()
@@ -51,7 +51,7 @@ QUANTITY = IntVar()
 RATE = IntVar()
 TAX = IntVar()
 TOTAL = IntVar()
-DISCOUNT = IntVar()
+
 CustomerName = StringVar()
 CustomerContact = StringVar()
 
@@ -82,8 +82,8 @@ def SubmitData():
     quantity = QUANTITY.get()
     rate = RATE.get()
 
-    dis = float((quantity * rate) * (DISCOUNT.get() / 100))
-    total = float(QUANTITY.get() * RATE.get() - dis)
+    
+    total = float(QUANTITY.get() * RATE.get())
     tax = float(TAX.get() * 0.01 * total)
 
     Products.append((product, quantity, rate, dis, total, tax))
