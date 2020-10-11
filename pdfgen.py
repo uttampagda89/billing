@@ -1,4 +1,4 @@
-import webbrowser
+
 from reportlab.pdfgen import canvas
 def getTotal(list):
   total=0
@@ -30,10 +30,10 @@ def rightalingn(pdf,string,left,right,ycoordinate):
 
 def header(header,pdf):
   pdf.setTitle(header.date+"Invoice")
-  # logo="logo.jpeg"
+  #logo="logo.jpeg"
   # pdf.drawInlineImage(logo,190,253)
 
-  pdf.line(30,815,350,815)
+  pdf.line(30,815,351,815)
   pdf.setFont("Courier-Bold",20)
   pdf.drawString(30,800,"Shop Name")
   pdf.setFont("Courier-Bold",11)
@@ -100,13 +100,13 @@ def footer(pdf,list):
 
 def About():
   pdf=canvas.Canvas("C:\\InvoiceGenerator\\about.pdf")
-  pdf.setFont("Courier-Bold",20)
-  pdf.drawString(40,700,"Paurush Kumar Gupta")
+  pdf.setFont("Courier-Bold",21)
+  pdf.drawString(45,700,"Paurush Kumar Gupta")
   pdf.setFont("Courier-Bold",15)
-  pdf.drawString(40,650,"Student, ")
-  pdf.drawString(40,630,"Computer Science & Engineering,")
-  pdf.drawString(40,610,"Noida Institute of Engineering & Technology,")
-  pdf.drawString(40,590,"Greater Noida, 201310.")
-  pdf.drawString(40,550,"Contact: gpaurush39@gmail.com")
+  pdf.drawString(45,650,"Student, ")
+  pdf.drawString(45,630,"Computer Science & Engineering,")
+  pdf.drawString(45,615,"Noida Institute of Engineering & Technology,")
+  pdf.drawString(45,590,"Greater Noida, 201320.")
+  pdf.drawString(40,550,"Contact: gparush39@gmail.com")
   pdf.save()
-  webbrowser.open("C:\\InvoiceGenerator\\about.pdf")
+  
