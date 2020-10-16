@@ -36,8 +36,8 @@ class product:
 
 root = Tk()
 root.title("E-INVOICE GENERATOR")
-width = 700
-height = 400
+width = 704
+height = 404
 screen_width = root.winfo_screenwidth()
 screen_height = root.winfo_screenheight()
 x = (screen_width / 2) - (width / 2)
@@ -63,7 +63,7 @@ def printinvoice():
     pdf = canvas.Canvas("C:\\InvoiceGenerator\\" + str(head.CustomerName) + ".pdf")
     pdfgen.header(head, pdf)
     pdfgen.middle(pdf)
-    ycooridinate = 650
+    ycooridinate = 652
     x = 1
 
     for item in Products:
@@ -197,11 +197,11 @@ lbl_title = Label(Top, text="Shree Raj Marble",fg="black", bg="purple",font=('ar
 lbl_title.pack(fill=X)
 
 # ============================BUTTONS=====================================
-btn_add = Button(MidLeft, text="Add New Item", bg="black", command=AddNewWindow)
+btn_add = Button(MidLeft, text="Add New Items", bg="black", command=AddNewWindow)
 btn_add.pack()
-btn_delete = Button(MidRight, text="Remove Selected Item", bg="red", command=DeleteData)
+btn_delete = Button(MidRight, text="Remove Selected Items", bg="red", command=DeleteData)
 btn_delete.pack(side=RIGHT)
-btn_about = Button(TableMargin, text="About Developer  \t\t\t\t\t\t\t\t\t\t\t\t\t", command=pdfgen.About)
+btn_about = Button(TableMargin, text="About Developer  \t\t\t\t\t\t\t\t\t\t\t\t", command=pdfgen.About)
 btn_about.pack(side=BOTTOM)
 btn_print = Button(TableMargin, text="Print Invoice", bg="gray", command=printinvoice)
 btn_print.pack(side=BOTTOM)
