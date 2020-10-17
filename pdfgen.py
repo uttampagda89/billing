@@ -20,7 +20,7 @@ def getTotalDis(list):
 
 def rightalingn(pdf,string,left,right,ycoordinate):
   length=len(string)
-  totalLength=(right-left)/7
+  totalLength=(right-left)/4
   print(totalLength)
   spaces=int(totalLength-length)
   print(spaces)
@@ -82,7 +82,7 @@ def additem(product,pdf,ycoordinate):
 
   rightalingn(pdf,"%.2f" %product.total,400,488,ycoordinate)
 
-  return (ycoordinate-15)
+  return (ycoordinate-5)
 
 def footer(pdf,list):
   pdf.drawString(30, 120, "Gross Total:")
